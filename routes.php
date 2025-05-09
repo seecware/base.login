@@ -10,5 +10,6 @@ return [
     ],
     'POST' => [
         '/new-client' => ['ClientsController', 'addNewClient'],
+        '/signup' => ['SignupController', 'registerUser'],
     ],
 ];
