@@ -5,13 +5,12 @@
 
   <h2 class="text-2xl font-bold text-gray-800 text-center">Crear una cuenta</h2>
 
-  <?php if (!empty($error)): ?>
-    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded text-sm">
-      <?= htmlspecialchars($error) ?>
-    </div>
-  <?php endif; ?>
+  <?php
+  $error = $_SESSION['error'] ?? '';
+  unset($_SESSION['error']);
+  ?>
 
-  <form action="register.php" method="POST" class="space-y-5">
+  <form action="/signup" method="POST" class="space-y-5">
     <div>
       <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
       <input
@@ -24,7 +23,7 @@
     </div>
 
     <div>
-      <label for="name" class="block text-sm font-medium text-gray-700">Last Name</label>
+      <label for="lastname" class="block text-sm font-medium text-gray-700">Last Name</label>
       <input
         type="text"
         id="lastname"
@@ -75,6 +74,12 @@
       Send
     </button>
   </form>
+
+  <?php if (!empty($error)): ?>
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded text-sm">
+      <?= htmlspecialchars($error) ?>
+    </div>
+  <?php endif; ?>
 
   <div class="text-center text-sm text-gray-500">
     Already have an account? <a href="/login" class="text-blue-600 hover:underline">Log In</a>
