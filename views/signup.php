@@ -1,4 +1,4 @@
-<main class="max-w-md mx-auto bg-white shadow-xl rounded-2xl p-8 my-8 space-y-6">
+<main class="animate-fade-in max-w-md mx-auto bg-white shadow-xl rounded-2xl p-8 my-8 space-y-6">
   <div class="flex justify-center">
     <img src="/assets/wd4f.jpeg" alt="Logo" class="max-w-[120px] h-auto mb-4">
   </div>
@@ -85,3 +85,13 @@
     Already have an account? <a href="/login" class="text-blue-600 hover:underline">Log In</a>
   </div>
 </main>
+<style>
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>

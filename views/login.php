@@ -10,7 +10,7 @@
     </div>
   <?php endif; ?>
 
-  <form action="login.php" method="POST" class="space-y-5">
+  <form action="/login" method="POST" class="space-y-5">
     <div>
       <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
       <input
@@ -40,12 +40,17 @@
       Log in
     </button>
   </form>
-
+  <div class="flex justify-center w-full">
+  <a href="/home" class="inline-block">
+  <button class="px-6 py-3 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 text-white text-lg font-bold rounded-full shadow-lg transition transform hover:scale-105 hover:from-green-600 hover:to-teal-600 focus:outline-none focus:ring-4 focus:ring-green-300 animate-pulse">
+    Back Home
+  </button>
+  </a>
+  </div>
   <div class="text-center text-sm text-gray-500">
     Don't have an account? <a href="/signup" class="text-blue-600 hover:underline">Sign Up</a>
   </div>
 </main>
-
 <style>
     .animate-fade-in {
       animation: fadeIn 1s ease-out both;
