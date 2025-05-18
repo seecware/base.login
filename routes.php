@@ -9,6 +9,7 @@ return [
         '/signup' => ['StaticContentController', 'renderContent', 'signup', ["title" => "Sign Up"]]
     ],
     'POST' => [
+        '/login' => ['LoginController', 'log', 'success-log', ['title' => 'Redirecting...']],
         '/new-client' => ['ClientsController', 'addNewClient'],
         '/signup' => ['SignupController', 'registerUser'],
     ],
